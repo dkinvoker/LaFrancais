@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LaFrancais.MainPage">
+
+    <VerticalStackLayout
+            Spacing="5"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand">
+
+        <Label x:Name="Meaning_Label" />
+
+        <HorizontalStackLayout Spacing="5" Margin="5">
+            <Button Text="à" Clicked="Button_Clicked" />
+            <Button Text="â" Clicked="Button_Clicked" />
+            <Button Text="æ" Clicked="Button_Clicked" />
+            <Button Text="ç" Clicked="Button_Clicked" />
+            <Button Text="é" Clicked="Button_Clicked" />
+            <Button Text="è" Clicked="Button_Clicked" />
+            <Button Text="ê" Clicked="Button_Clicked" />
+            <Button Text="ë" Clicked="Button_Clicked" />
+            <Button Text="î" Clicked="Button_Clicked" />
+            <Button Text="ï" Clicked="Button_Clicked" />
+            <Button Text="ô" Clicked="Button_Clicked" />
+            <Button Text="œ" Clicked="Button_Clicked" />
+            <Button Text="ù" Clicked="Button_Clicked" />
+            <Button Text="û" Clicked="Button_Clicked" />
+            <Button Text="ü" Clicked="Button_Clicked" />
+            <Button Text="ÿ" Clicked="Button_Clicked" />
+        </HorizontalStackLayout>
+
+        <Editor x:Name="Input_Editor" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+
+        <Button Text="Confirm" x:Name="Confirm_button" />
+
+    </VerticalStackLayout>
+
+</ContentPage>
