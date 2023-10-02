@@ -8,7 +8,7 @@
             VerticalOptions="FillAndExpand"
             HorizontalOptions="FillAndExpand">
 
-        <Label x:Name="Meaning_Label" />
+        <Label x:Name="Meaning_Label" Margin="10" FontSize="24" />
 
         <HorizontalStackLayout Spacing="5" Margin="5">
             <Button Text="à" Clicked="Button_Clicked" />
@@ -31,7 +31,9 @@
 
         <Editor x:Name="Input_Editor" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
 
-        <Button Text="Confirm" x:Name="Confirm_button" />
+        <Button Text="Confirm" x:Name="Confirm_button" Clicked="Confirm_button_Clicked" />
+
+        <Label x:Name="Count_label" FontSize="24" HorizontalOptions="End" Margin="5" />
 
     </VerticalStackLayout>
 
