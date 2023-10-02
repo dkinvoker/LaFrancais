@@ -8,8 +8,8 @@ namespace LaFrancais.Code
 {
     internal sealed class QuizEntry
     {
-        public string Meaning { get; set; }
-        public string FrancaisSpelling { get; set; }
-        public string ImageLink { get; set; }
+        public required string Meaning { get; set; }
+        public required string FrancaisSpelling { get; set; }
+        public string? ImageLink { get; set; }
     }
 }

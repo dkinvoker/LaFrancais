@@ -10,7 +10,7 @@
         private void Button_Clicked(object sender, EventArgs e)
         {
             var senderButton = sender as Button;
-            this.Input_Editor.Text += senderButton.Text;
+            this.Input_Editor.Text += senderButton!.Text;
         }
     }
 }
