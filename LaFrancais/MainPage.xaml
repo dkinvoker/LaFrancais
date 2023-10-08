@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:windows="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
              x:Class="LaFrancais.MainPage">
 
     <Grid Padding="5">
@@ -12,11 +13,16 @@
         </Grid.RowDefinitions>
 
         <StackLayout Orientation="Horizontal" Spacing="5">
-            <Label x:Name="Meaning_Label" Margin="10" FontSize="24" />
-            <Image x:Name="Image_Image" HeightRequest="240" />
+            <Label x:Name="Meaning_Label" Margin="10" FontSize="24" VerticalOptions="Center" />
+            <Image x:Name="Image_Image" HeightRequest="90" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="End">
+            <Label x:Name="Good_label" FontSize="24" TextColor="Green" />
+            <Label x:Name="Bad_label" FontSize="24" TextColor="Red" />
+            <Label x:Name="Count_label" FontSize="24" />    
         </StackLayout>
         
-        <Label x:Name="Count_label" FontSize="24" HorizontalOptions="End" Margin="5" />
             
         <HorizontalStackLayout Spacing="5" Margin="5" Grid.Row="1">
             <Button Text="à" Clicked="Button_Clicked" />
@@ -37,7 +43,7 @@
             <Button Text="ÿ" Clicked="Button_Clicked" />
         </HorizontalStackLayout>
 
-        <Editor x:Name="Input_Editor" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="2" Margin="2" />
+        <Editor x:Name="Input_Editor" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="2" Margin="2" TextChanged="Input_Editor_TextChanged" />
 
         <Button Text="Confirm" x:Name="Confirm_button" Clicked="Confirm_button_Clicked" Grid.Row="3" />
 

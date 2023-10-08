@@ -34,6 +34,16 @@ namespace LaFrancais.Code
 
             var unused = QuizEntries.Where(e => e.Used == false);
             var randomEntry = unused.OrderBy(e => Random.Shared.Next()).FirstOrDefault();
+
+            if (randomEntry is null)
+            {
+                foreach (var item in QuizEntries)
+                {
+                    item.Used = false;
+                }
+                randomEntry = unused.OrderBy(e => Random.Shared.Next()).FirstOrDefault();
+            }
+
             randomEntry!.Used = true;
             return randomEntry;
         }
