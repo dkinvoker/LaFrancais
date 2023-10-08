@@ -3,14 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LaFrancais.MainPage">
 
-    <VerticalStackLayout
-            Spacing="5"
-            VerticalOptions="FillAndExpand"
-            HorizontalOptions="FillAndExpand">
+    <Grid Padding="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-        <Label x:Name="Meaning_Label" Margin="10" FontSize="24" />
-
-        <HorizontalStackLayout Spacing="5" Margin="5">
+        <StackLayout Orientation="Horizontal" Spacing="5">
+            <Label x:Name="Meaning_Label" Margin="10" FontSize="24" />
+            <Image x:Name="Image_Image" HeightRequest="240" />
+        </StackLayout>
+        
+        <Label x:Name="Count_label" FontSize="24" HorizontalOptions="End" Margin="5" />
+            
+        <HorizontalStackLayout Spacing="5" Margin="5" Grid.Row="1">
             <Button Text="à" Clicked="Button_Clicked" />
             <Button Text="â" Clicked="Button_Clicked" />
             <Button Text="æ" Clicked="Button_Clicked" />
@@ -29,12 +37,19 @@
             <Button Text="ÿ" Clicked="Button_Clicked" />
         </HorizontalStackLayout>
 
-        <Editor x:Name="Input_Editor" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <Editor x:Name="Input_Editor" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="2" Margin="2" />
 
-        <Button Text="Confirm" x:Name="Confirm_button" Clicked="Confirm_button_Clicked" />
+        <Button Text="Confirm" x:Name="Confirm_button" Clicked="Confirm_button_Clicked" Grid.Row="3" />
 
-        <Label x:Name="Count_label" FontSize="24" HorizontalOptions="End" Margin="5" />
-
-    </VerticalStackLayout>
+        <Grid x:Name="Loading_Grid" Grid.RowSpan="4" Margin="-5">
+            <Rectangle VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" Opacity="0.5" />
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Fill">
+                <Label Text="Loading..." HorizontalOptions="Center" />
+                <ProgressBar Margin="10" x:Name="Loading_ProgressBar" ProgressColor="DarkViolet" />    
+            </StackLayout>
+            
+        </Grid>
+        
+    </Grid>
 
 </ContentPage>
