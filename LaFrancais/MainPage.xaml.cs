@@ -9,10 +9,12 @@ namespace LaFrancais
         private int GoodAnswers { get; set; } = 0;
         private int BadAnswers { get; set; } = 0;
 
-        private string GoodAnswersText => $"{(double)GoodAnswers / Submits * 100}%";
-        private string BadAnswersText => $"{(double)BadAnswers / Submits * 100}%";
+        private string GoodAnswersText => $"{((double)GoodAnswers / Submits * 100):0.00}%";
+        private string BadAnswersText => $"{((double)BadAnswers / Submits * 100):0.00}%";
 
         private QuizEntry CurrentEntry { get; set; }
+
+        private List<Locale> FrancaisLocates { get; set; } = new List<Locale>();
 
         public MainPage()
         {
@@ -25,29 +27,33 @@ namespace LaFrancais
         {
             var senderButton = sender as Button;
             this.Input_Editor.Text += senderButton!.Text;
+            this.Input_Editor.Focus();
         }
 
         private async void Confirm_button_Clicked(object sender, EventArgs e)
         {
-            IEnumerable<Locale> locales = await TextToSpeech.GetLocalesAsync();
-            var francaisLocate = locales.FirstOrDefault(l => l.Country == "");
-
-            TextToSpeech.Default.SpeakAsync(this.CurrentEntry.FrancaisSpelling);
+            var narrator = this.Narrator_Picker.SelectedItem as string;
+            if (narrator is not null)
+            {
+                SpeechOptions speachOptions = new() { Locale = this.FrancaisLocates.Single(l => l.Name == narrator) };
+                TextToSpeech.Default.SpeakAsync(this.CurrentEntry.FrancaisSpelling, speachOptions);
+            }
 
             if (this.Input_Editor.Text.Trim().ToLower() == this.CurrentEntry.FrancaisSpelling.Trim().ToLower())
             {
                 this.GoodAnswers++;
                 await DisplayAlert("Très bien!", $"'{this.CurrentEntry.FrancaisSpelling}' == '{this.CurrentEntry.Meaning}'", "Suivant");
 
-                this.CurrentEntry = (await QuizManager.GetNextEntry())!;
-                this.Meaning_Label.Text = this.CurrentEntry.Meaning;
-                this.Count_label.Text = this.EntriesCount;
-                this.Image_Image.Source = this.CurrentEntry.ImageLink;
+                await this.GoToNextQuestion();
             }
             else
             {
                 this.BadAnswers++;
-                await DisplayAlert("Mal!", $"'{this.CurrentEntry.FrancaisSpelling}' == '{this.CurrentEntry.Meaning}'", "Suivant");
+                var next = !await DisplayAlert("Mal!", $"'{this.CurrentEntry.FrancaisSpelling}' == '{this.CurrentEntry.Meaning}'", "Répéter", "Suivant");
+                if (next)
+                {
+                    await this.GoToNextQuestion();
+                }
             }
 
             this.Submits++;
@@ -59,12 +65,27 @@ namespace LaFrancais
             this.Input_Editor.Focus();
         }
 
+        private async Task GoToNextQuestion()
+        {
+            this.CurrentEntry = (await QuizManager.GetNextEntry())!;
+            this.Meaning_Label.Text = this.CurrentEntry.Meaning;
+            this.Count_label.Text = this.EntriesCount;
+            this.Image_Image.Source = this.CurrentEntry.ImageLink;
+        }
+
         private async Task InitialLoad()
         {
             this.CurrentEntry = (await QuizManager.GetNextEntry())!;
             this.Meaning_Label.Text = this.CurrentEntry.Meaning;
             this.Count_label.Text = this.EntriesCount;
             this.Image_Image.Source = this.CurrentEntry.ImageLink;
+
+            this.FrancaisLocates = (await TextToSpeech.GetLocalesAsync()).Where(l => l.Language == "fr-FR").ToList();
+            this.Narrator_Picker.ItemsSource = this.FrancaisLocates.Select(l => l.Name).ToList();
+            if (this.FrancaisLocates.Count > 0)
+            {
+                this.Narrator_Picker.SelectedIndex = 0;
+            }
 
             this.Loading_Grid.IsVisible = false;
 
@@ -77,6 +98,11 @@ namespace LaFrancais
             {
                 this.Confirm_button_Clicked(this.Confirm_button, null);
             }
+        }
+
+        private void Info_Button_Clicked(object sender, EventArgs e)
+        {
+            //TODO
         }
     }
 }
