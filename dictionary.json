@@ -1,5 +1,14 @@
 [
     {
+        "Name": "TEST MODULE",
+        "Entries" : [
+            {
+                "Meaning": "Test",
+                "FrancaisSpelling": "Test"
+            }
+        ]
+    },
+    {
         "Name": "0 - Basics",
         "Entries": [
             {
