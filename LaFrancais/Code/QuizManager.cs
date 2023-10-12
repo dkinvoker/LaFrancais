@@ -14,37 +14,60 @@ namespace LaFrancais.Code
 
         private static readonly HttpClient HttpClient = new HttpClient();
 
-        public static int Count => QuizEntries?.Length ?? 0;
-        public static int UsedCount => QuizEntries?.Count(e => e.Used) ?? 0;
+        public static int Count => ActiveEntries.Count();
+        public static int UsedCount => ActiveEntries.Count(e => e.Used);
 
-        private static async Task<QuizEntry[]> GetQuizEntries()
+        public static async Task LoadModules()
         {
             var response = await HttpClient.GetAsync("https://dkinvoker.github.io/LaFrancais/dictionary.json");
-            return JsonSerializer.Deserialize<QuizEntry[]>(await response.Content.ReadAsStringAsync())!;
+            Modules = JsonSerializer.Deserialize<Module[]>(await response.Content.ReadAsStringAsync())!;
         }
 
-        private static QuizEntry[]? QuizEntries = null;
+        public static Module[]? Modules = null;
 
-        public static async Task<QuizEntry?> GetNextEntry()
+        private static Module[] _activeModules;
+        public static Module[] ActiveModules 
         {
-            if (QuizEntries == null)
+            get
             {
-                QuizEntries = await GetQuizEntries();
+                return _activeModules;
             }
+            set
+            {
+                _activeModules = value;
+                foreach (var module in Modules!)
+                {
+                    foreach (var entry in module.Entries)
+                    {
+                        entry.Used = false;
+                    }
+                }
 
-            var unused = QuizEntries.Where(e => e.Used == false);
+                ActiveEntries = value.SelectMany(m => m.Entries);
+            }
+        }
+
+        private static IEnumerable<QuizEntry> ActiveEntries = Array.Empty<QuizEntry>();
+
+        public static QuizEntry? GetNextEntry()
+        {
+            var unused = ActiveEntries.Where(e => e.Used == false);
             var randomEntry = unused.OrderBy(e => Random.Shared.Next()).FirstOrDefault();
 
             if (randomEntry is null)
             {
-                foreach (var item in QuizEntries)
+                foreach (var item in ActiveEntries)
                 {
                     item.Used = false;
                 }
                 randomEntry = unused.OrderBy(e => Random.Shared.Next()).FirstOrDefault();
             }
 
-            randomEntry!.Used = true;
+            if (randomEntry is not null)
+            {
+                randomEntry!.Used = true;
+            }
+            
             return randomEntry;
         }
     }

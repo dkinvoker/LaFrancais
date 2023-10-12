@@ -44,7 +44,11 @@
             <Button Text="ÿ" Clicked="Button_Clicked" />
         </HorizontalStackLayout>
 
-        <Button Padding="0" BackgroundColor="DarkBlue" x:Name="Info_Button" Grid.Row="1" HorizontalOptions="End" FontFamily="Segoe Fluent Icons" Text="&#xE946;" WidthRequest="24" HeightRequest="24" FontSize="24" Clicked="Info_Button_Clicked" />
+        <StackLayout Orientation="Horizontal" Grid.Row="1" Spacing="5" HorizontalOptions="End">
+            <Button x:Name="Modules_button" BackgroundColor="DarkBlue" Text="Modules" Clicked="Modules_button_Clicked" HeightRequest="24" />
+            <Button Padding="0" BackgroundColor="DarkBlue" x:Name="Info_Button" Grid.Row="1" FontFamily="Segoe Fluent Icons" Text="&#xE946;" WidthRequest="24" HeightRequest="24" FontSize="24" Clicked="Info_Button_Clicked" />
+        </StackLayout>
+        
 
         <Editor x:Name="Input_Editor" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="2" Margin="2" TextChanged="Input_Editor_TextChanged" />
 
@@ -58,7 +62,19 @@
             </StackLayout>
             
         </Grid>
-        
+
+        <Grid x:Name="Modules_Grid" Grid.RowSpan="4" IsVisible="false" Margin="25">
+            <RoundRectangle CornerRadius="25" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Fill="LightGray"  Opacity="0.95" />
+            <StackLayout Orientation="Vertical" Spacing="10">
+                <Button x:Name="CloseModule_Button" HorizontalOptions="End" Margin="10" FontFamily="Segoe Fluent Icons" Text="&#xE711;" WidthRequest="24" HeightRequest="24" FontSize="24" Clicked="CloseModule_Button_Clicked" />
+                <ScrollView Margin="25">
+                    <StackLayout x:Name="Modules_StackLayout" Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="Fill">
+                        <!--DYNAMIC-->
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+
     </Grid>
 
 </ContentPage>

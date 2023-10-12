@@ -9,8 +9,8 @@ namespace LaFrancais
         private int GoodAnswers { get; set; } = 0;
         private int BadAnswers { get; set; } = 0;
 
-        private string GoodAnswersText => $"{((double)GoodAnswers / Submits * 100):0.00}%";
-        private string BadAnswersText => $"{((double)BadAnswers / Submits * 100):0.00}%";
+        private string GoodAnswersText => $"{((double)GoodAnswers / Submits * 100):0}%";
+        private string BadAnswersText => $"{((double)BadAnswers / Submits * 100):0}%";
 
         private QuizEntry CurrentEntry { get; set; }
 
@@ -42,17 +42,17 @@ namespace LaFrancais
             if (this.Input_Editor.Text.Trim().ToLower() == this.CurrentEntry.FrancaisSpelling.Trim().ToLower())
             {
                 this.GoodAnswers++;
-                await DisplayAlert("Très bien!", $"'{this.CurrentEntry.FrancaisSpelling}' == '{this.CurrentEntry.Meaning}'", "Suivant");
+                await DisplayAlert("Très bien!", $"'{this.CurrentEntry.FrancaisSpelling}' == '{this.CurrentEntry.Meaning}'", "Suivant →");
 
-                await this.GoToNextQuestion();
+                this.GoToNextQuestion();
             }
             else
             {
                 this.BadAnswers++;
-                var next = !await DisplayAlert("Mal!", $"'{this.CurrentEntry.FrancaisSpelling}' == '{this.CurrentEntry.Meaning}'", "Répéter", "Suivant");
+                var next = !await DisplayAlert("Mal!", $"'{this.CurrentEntry.FrancaisSpelling}' == '{this.CurrentEntry.Meaning}'", "Répéter ⭯", "Suivant →");
                 if (next)
                 {
-                    await this.GoToNextQuestion();
+                    this.GoToNextQuestion();
                 }
             }
 
@@ -65,17 +65,20 @@ namespace LaFrancais
             this.Input_Editor.Focus();
         }
 
-        private async Task GoToNextQuestion()
+        private void GoToNextQuestion()
         {
-            this.CurrentEntry = (await QuizManager.GetNextEntry())!;
-            this.Meaning_Label.Text = this.CurrentEntry.Meaning;
+            this.CurrentEntry = QuizManager.GetNextEntry()!;
+            this.Meaning_Label.Text = this.CurrentEntry?.Meaning;
             this.Count_label.Text = this.EntriesCount;
-            this.Image_Image.Source = this.CurrentEntry.ImageLink;
+            this.Image_Image.Source = this.CurrentEntry?.ImageLink;
         }
 
         private async Task InitialLoad()
         {
-            this.CurrentEntry = (await QuizManager.GetNextEntry())!;
+            await QuizManager.LoadModules();
+            this.PopulateModules();
+
+            this.CurrentEntry = QuizManager.GetNextEntry()!;
             this.Meaning_Label.Text = this.CurrentEntry.Meaning;
             this.Count_label.Text = this.EntriesCount;
             this.Image_Image.Source = this.CurrentEntry.ImageLink;
@@ -100,9 +103,64 @@ namespace LaFrancais
             }
         }
 
+        private void PopulateModules()
+        {
+            QuizManager.ActiveModules = QuizManager.Modules!;
+            foreach (var module in QuizManager.Modules!)
+            {
+                var element = new StackLayout() 
+                {
+                    Spacing = 5,
+                    Orientation = StackOrientation.Horizontal
+                };
+                var label = new Label() { Text = module.Name, VerticalOptions = LayoutOptions.Center, FontSize = 16 };
+                var checkbox = new CheckBox() { IsChecked = true };
+                checkbox.CheckedChanged += Checkbox_CheckedChanged;
+
+                element.Add(checkbox);
+                element.Add(label);
+
+                this.Modules_StackLayout.Add(element);
+            }
+        }
+
+        private void Checkbox_CheckedChanged(object? sender, CheckedChangedEventArgs e)
+        {
+            var checkboxList = this.Modules_StackLayout.Children.Cast<StackLayout>().Select(s => s.Children[0] as CheckBox);
+            var index = 0;
+            for (int i = 0; i < checkboxList.Count(); ++i)
+            {
+                if ((checkboxList!).ElementAt(i) == (sender! as CheckBox))
+                {
+                    index = i;
+                    break;
+                }
+            }
+
+            if (e.Value)
+            {
+                QuizManager.ActiveModules = QuizManager.ActiveModules.Concat(new Module[] { QuizManager.Modules![index] }).ToArray();
+            }
+            else
+            {
+                QuizManager.ActiveModules = QuizManager.ActiveModules.Where(m => m != QuizManager.Modules![index]).ToArray();
+            }
+            this.GoToNextQuestion();
+        }
+
         private void Info_Button_Clicked(object sender, EventArgs e)
         {
             //TODO
+        }
+
+        private void Modules_button_Clicked(object sender, EventArgs e)
+        {
+            this.Modules_Grid.IsVisible = true;
+        }
+
+        private void CloseModule_Button_Clicked(object sender, EventArgs e)
+        {
+            this.Modules_Grid.IsVisible = false;
         }
     }
 }
