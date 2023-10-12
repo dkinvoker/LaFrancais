@@ -1,57 +1,62 @@
 [
     {
-        "Meaning": "Thank you very much",
-        "FrancaisSpelling": "Merci beaucoup"
-    },
-    {
-        "Meaning": "House",
-        "FrancaisSpelling": "La maison",
-        "ImageLink": "https://png.pngtree.com/png-vector/20191005/ourlarge/pngtree-house-icon-png-image_1794742.jpg"
-    },
-    {
-        "Meaning": "Hi!",
-        "FrancaisSpelling": "Salut"
-    },
-    {
-        "Meaning": "Yes",
-        "FrancaisSpelling": "Oui"
-    },
-    {
-        "Meaning": "No",
-        "FrancaisSpelling": "Non"
-    },
-    {
-        "Meaning": "Maybe/perhaps",
-        "FrancaisSpelling": "peut-être"
-    },
-    {
-        "Meaning": "I don't know",
-        "FrancaisSpelling": "Je ne sais pas",
-        "ImageLink": "https://media.istockphoto.com/id/637743724/vector/dont-know-emoticon.jpg?s=612x612&w=0&k=20&c=bgCsI_wV-zRvFubr7SMeww-EMybuMzKwF1PvuYaKuvw="
-    },
-    {
-        "Meaning": "Please",
-        "FrancaisSpelling": "S'il te plaît",
-        "ImageLink": "https://previews.123rf.com/images/kazit/kazit1609/kazit160900011/63578850-emoticon-begging-for-forgiveness-sorry-emoticon-oh-please-emoticon-persuade-emoji-implore-emotion.jpg"
-    },
-    {
-        "Meaning": "You're welcome",
-        "FrancaisSpelling": "De rien"
-    },
-    {
-        "Meaning": "Good day",
-        "FrancaisSpelling": "Bonjour"
-    },
-    {
-        "Meaning": "Goodbye",
-        "FrancaisSpelling": "Au revoir"
-    },
-    {
-        "Meaning": "Sorry",
-        "FrancaisSpelling": "Pardon"
-    },
-    {
-        "Meaning": "Okay/All right",
-        "FrancaisSpelling": "D'accord"
-    }
+        "Name": "0 - Basics",
+        "Entries": [
+            {
+                "Meaning": "Thank you very much",
+                "FrancaisSpelling": "Merci beaucoup"
+            },
+            {
+                "Meaning": "House",
+                "FrancaisSpelling": "La maison",
+                "ImageLink": "https://png.pngtree.com/png-vector/20191005/ourlarge/pngtree-house-icon-png-image_1794742.jpg"
+            },
+            {
+                "Meaning": "Hi!",
+                "FrancaisSpelling": "Salut"
+            },
+            {
+                "Meaning": "Yes",
+                "FrancaisSpelling": "Oui"
+            },
+            {
+                "Meaning": "No",
+                "FrancaisSpelling": "Non"
+            },
+            {
+                "Meaning": "Maybe/perhaps",
+                "FrancaisSpelling": "peut-être"
+            },
+            {
+                "Meaning": "I don't know",
+                "FrancaisSpelling": "Je ne sais pas",
+                "ImageLink": "https://media.istockphoto.com/id/637743724/vector/dont-know-emoticon.jpg?s=612x612&w=0&k=20&c=bgCsI_wV-zRvFubr7SMeww-EMybuMzKwF1PvuYaKuvw="
+            },
+            {
+                "Meaning": "Please",
+                "FrancaisSpelling": "S'il te plaît",
+                "ImageLink": "https://previews.123rf.com/images/kazit/kazit1609/kazit160900011/63578850-emoticon-begging-for-forgiveness-sorry-emoticon-oh-please-emoticon-persuade-emoji-implore-emotion.jpg"
+            },
+            {
+                "Meaning": "You're welcome",
+                "FrancaisSpelling": "De rien"
+            },
+            {
+                "Meaning": "Good day",
+                "FrancaisSpelling": "Bonjour"
+            },
+            {
+                "Meaning": "Goodbye",
+                "FrancaisSpelling": "Au revoir"
+            },
+            {
+                "Meaning": "Sorry",
+                "FrancaisSpelling": "Pardon"
+            },
+            {
+                "Meaning": "Okay/All right",
+                "FrancaisSpelling": "D'accord"
+            }
+        ]
+    }   
 ]
