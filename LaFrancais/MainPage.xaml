@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:windows="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
-             x:Class="LaFrancais.MainPage">
+             x:Class="LaFrancais.MainPage"
+             xmlns:local="clr-namespace:LaFrancais.Code">
 
     <Grid Padding="5">
         <Grid.RowDefinitions>
@@ -55,7 +56,7 @@
         <Button Text="Confirmer" x:Name="Confirm_button" Clicked="Confirm_button_Clicked" Grid.Row="3" />
 
         <Grid x:Name="Loading_Grid" Grid.RowSpan="4" Margin="-5">
-            <Rectangle VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" Opacity="0.5" />
+            <Rectangle VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="LightGray" Opacity="0.5" />
             <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Fill">
                 <Label Text="Loading..." HorizontalOptions="Center" />
                 <ProgressBar Margin="10" x:Name="Loading_ProgressBar" ProgressColor="DarkViolet" />    
@@ -64,15 +65,52 @@
         </Grid>
 
         <Grid x:Name="Modules_Grid" Grid.RowSpan="4" IsVisible="false" Margin="25">
-            <RoundRectangle CornerRadius="25" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Fill="LightGray"  Opacity="0.95" />
-            <StackLayout Orientation="Vertical" Spacing="10">
-                <Button x:Name="CloseModule_Button" HorizontalOptions="End" Margin="10" FontFamily="Segoe Fluent Icons" Text="&#xE711;" WidthRequest="24" HeightRequest="24" FontSize="24" Clicked="CloseModule_Button_Clicked" />
-                <ScrollView Margin="25">
-                    <StackLayout x:Name="Modules_StackLayout" Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="Fill">
-                        <!--DYNAMIC-->
-                    </StackLayout>
-                </ScrollView>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <RoundRectangle Grid.RowSpan="2" CornerRadius="15" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Fill="LightGray"  Opacity="0.95" />
+            <StackLayout Orientation="Horizontal" Margin="10" Spacing="10">
+                <Button x:Name="SelectAll_Button" Padding="0" FontFamily="Segoe Fluent Icons" Text="&#xE8b3;" WidthRequest="24" HeightRequest="24" FontSize="24" Clicked="SelectAll_Button_Clicked" />
             </StackLayout>
+            <Button x:Name="CloseModule_Button" HorizontalOptions="End" Margin="10" FontFamily="Segoe Fluent Icons" Text="&#xE711;" WidthRequest="24" HeightRequest="24" FontSize="24" Clicked="CloseModule_Button_Clicked" />
+            <ScrollView Grid.Row="1" Margin="25">
+                <StackLayout x:Name="Modules_StackLayout" Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="Fill">
+                    <!--DYNAMIC-->
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+
+        <Grid x:Name="Info_Grid" Grid.RowSpan="4" IsVisible="false" Margin="25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <RoundRectangle Grid.RowSpan="2" CornerRadius="15" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Fill="LightGray"  Opacity="0.95" />
+            <Button x:Name="CloseInfo_Button" HorizontalOptions="End" Margin="10" FontFamily="Segoe Fluent Icons" Text="&#xE711;" WidthRequest="24" HeightRequest="24" FontSize="24" Clicked="CloseInfo_Button_Clicked" />
+            <ScrollView Margin="25" Grid.Row="1">
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" Spacing="4">
+                    <Label FontAttributes="Bold" Text="QUIZ  - Le français" HorizontalOptions="Center" />
+                    <Image Source="france2.png" HeightRequest="100" />
+                    <Label Text="Author: Marcin Pająk" HorizontalOptions="Center" Margin="0, 10, 0, 0" />
+                    <Label Text="This application is meant to help you learn how to write and pronounce various francais words." />
+                    <FlexLayout Wrap="Wrap" AlignContent="Stretch" AlignItems="Start">
+                        <Label Text="Instruction how to use an app and how to setup narrator can be found at" />
+                        <local:HyperlinkLabel Margin="2, 0, 0, 0" Text="https://dkinvoker.github.io/LaFrancais/" Url="https://dkinvoker.github.io/LaFrancais/" />
+                        <Label Text="." />
+                    </FlexLayout>
+                    <FlexLayout Wrap="Wrap" AlignContent="Stretch" AlignItems="Start">
+                        <Label Text="Modules and new words will be gradually added as time passes. If you want to help with it contribute to" />
+                        <local:HyperlinkLabel Margin="2, 0, 0, 0" Text="GitHub project" Url="https://github.com/dkinvoker/LaFrancais" />
+                        <Label Text="." />
+                    </FlexLayout>
+                    <Label Text="No updates necessary! Dictionary is automatically synced at startup." />
+
+                    <Label Margin="0, 25, 0, 0" Text="External resources:" HorizontalOptions="Center" />
+                    <local:HyperlinkLabel Text="France icons created by Freepik - Flaticon" Url="https://www.flaticon.com/free-icon/france_3013904?term=france&amp;page=1&amp;position=12&amp;origin=tag&amp;related_id=3013904" />
+                </StackLayout>
+            </ScrollView>
         </Grid>
 
     </Grid>

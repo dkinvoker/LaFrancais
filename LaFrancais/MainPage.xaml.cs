@@ -1,9 +1,12 @@
 ﻿using LaFrancais.Code;
+using System.Windows.Input;
 
 namespace LaFrancais
 {
     public partial class MainPage : ContentPage
     {
+        // Launcher.OpenAsync is provided by Essentials.
+        public ICommand UrlCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
         private string EntriesCount => $"{QuizManager.UsedCount} / {QuizManager.Count}";
         private int Submits { get; set; } = 0;
         private int GoodAnswers { get; set; } = 0;
@@ -19,6 +22,7 @@ namespace LaFrancais
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = this;
             this.Loading_ProgressBar.ProgressTo(1, 3000, Easing.CubicIn);
             this.InitialLoad();
         }
@@ -124,7 +128,7 @@ namespace LaFrancais
             }
         }
 
-        private void Checkbox_CheckedChanged(object? sender, CheckedChangedEventArgs e)
+        private int GetModuleIndexFromCheckBoxSender(object sender)
         {
             var checkboxList = this.Modules_StackLayout.Children.Cast<StackLayout>().Select(s => s.Children[0] as CheckBox);
             var index = 0;
@@ -136,6 +140,12 @@ namespace LaFrancais
                     break;
                 }
             }
+            return index;
+        }
+
+        private void Checkbox_CheckedChanged(object? sender, CheckedChangedEventArgs e)
+        {
+            var index = GetModuleIndexFromCheckBoxSender(sender!);   
 
             if (e.Value)
             {
@@ -150,7 +160,7 @@ namespace LaFrancais
 
         private void Info_Button_Clicked(object sender, EventArgs e)
         {
-            //TODO
+            this.Info_Grid.IsVisible = true;
         }
 
         private void Modules_button_Clicked(object sender, EventArgs e)
@@ -161,6 +171,30 @@ namespace LaFrancais
         private void CloseModule_Button_Clicked(object sender, EventArgs e)
         {
             this.Modules_Grid.IsVisible = false;
+        }
+
+        private void CloseInfo_Button_Clicked(object sender, EventArgs e)
+        {
+            this.Info_Grid.IsVisible = false;
+        }
+
+        private void SelectAll_Button_Clicked(object sender, EventArgs e)
+        {
+            var checkboxList = this.Modules_StackLayout.Children.Cast<StackLayout>().Select(s => s.Children[0] as CheckBox);
+            if (checkboxList.All(c => c.IsChecked))
+            {
+                foreach (var checkbox in checkboxList)
+                {
+                    checkbox!.IsChecked = false;
+                }
+            }
+            else
+            {
+                foreach (var checkbox in checkboxList)
+                {
+                    checkbox!.IsChecked = true;
+                }
+            }
         }
     }
 }
