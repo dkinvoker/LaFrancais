@@ -17,13 +17,15 @@ namespace LaFrancais.Code
         public static int Count => ActiveEntries.Count();
         public static int UsedCount => ActiveEntries.Count(e => e.Used);
 
-        public static async Task LoadModules()
+        public static async Task LoadDictionary()
         {
             var response = await HttpClient.GetAsync("https://dkinvoker.github.io/LaFrancais/dictionary.json");
-            Modules = JsonSerializer.Deserialize<Module[]>(await response.Content.ReadAsStringAsync())!;
+            Chapters = JsonSerializer.Deserialize<Chapter[]>(await response.Content.ReadAsStringAsync())!;
         }
 
-        public static Module[]? Modules = null;
+        public static Module[] AllModules => Chapters!.SelectMany(e => e.Modules).ToArray();
+
+        public static Chapter[]? Chapters = null;
 
         private static Module[] _activeModules;
         public static Module[] ActiveModules 
@@ -35,11 +37,14 @@ namespace LaFrancais.Code
             set
             {
                 _activeModules = value;
-                foreach (var module in Modules!)
+                foreach (var chapter in Chapters!)
                 {
-                    foreach (var entry in module.Entries)
+                    foreach (var module in chapter.Modules)
                     {
-                        entry.Used = false;
+                        foreach (var entry in module.Entries)
+                        {
+                            entry.Used = false;
+                        }
                     }
                 }
 

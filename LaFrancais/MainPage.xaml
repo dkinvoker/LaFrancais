@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:windows="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
              x:Class="LaFrancais.MainPage"
-             xmlns:local="clr-namespace:LaFrancais.Code">
+             xmlns:local="clr-namespace:LaFrancais.Code"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
 
     <Grid Padding="5">
         <Grid.RowDefinitions>
@@ -72,11 +73,11 @@
 
             <RoundRectangle Grid.RowSpan="2" CornerRadius="15" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Fill="LightGray"  Opacity="0.95" />
             <StackLayout Orientation="Horizontal" Margin="10" Spacing="10">
-                <Button x:Name="SelectAll_Button" Padding="0" FontFamily="Segoe Fluent Icons" Text="&#xE8b3;" WidthRequest="24" HeightRequest="24" FontSize="24" Clicked="SelectAll_Button_Clicked" />
+                <Button x:Name="SelectAll_Button" Padding="0" FontFamily="Segoe Fluent Icons" Text="&#xEa98;" WidthRequest="24" HeightRequest="24" FontSize="24" Clicked="SelectAll_Button_Clicked" />
             </StackLayout>
             <Button x:Name="CloseModule_Button" HorizontalOptions="End" Margin="10" FontFamily="Segoe Fluent Icons" Text="&#xE711;" WidthRequest="24" HeightRequest="24" FontSize="24" Clicked="CloseModule_Button_Clicked" />
             <ScrollView Grid.Row="1" Margin="25">
-                <StackLayout x:Name="Modules_StackLayout" Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="Fill">
+                <StackLayout x:Name="Modules_StackLayout" Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="Fill" Spacing="10">
                     <!--DYNAMIC-->
                 </StackLayout>
             </ScrollView>

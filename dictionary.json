@@ -1,19 +1,5 @@
 [
     {
-        "Name": "TEST",
-        "Modules":[
-            {
-                "Name": "TEST MODULE",
-                "Entries" : [
-                    {
-                        "Meaning": "Test",
-                        "FrancaisSpelling": "Test"
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "Name": "A1",
         "Modules": [
             {
@@ -75,7 +61,49 @@
                         "FrancaisSpelling": "D'accord"
                     }
                 ]
+            },
+            {
+                "Name": "1 - Numbers",
+                "Entries": [
+
+                ]
+            },
+            {
+                "Name": "2 - Animals",
+                "Entries": [
+                    
+                ]
             }
+        ]
+    },
+    {
+        "Name": "A2",
+        "Modules": [
+
+        ]
+    },
+    {
+        "Name": "B1",
+        "Modules": [
+
+        ]
+    },
+    {
+        "Name": "B2",
+        "Modules": [
+
+        ]
+    },
+    {
+        "Name": "C1",
+        "Modules": [
+
+        ]
+    },
+    {
+        "Name": "C2",
+        "Modules": [
+
         ]
     }   
 ]

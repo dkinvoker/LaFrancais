@@ -1,5 +1,7 @@
-﻿using LaFrancais.Code;
+﻿using CommunityToolkit.Maui.Views;
+using LaFrancais.Code;
 using System.Windows.Input;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace LaFrancais
 {
@@ -79,7 +81,7 @@ namespace LaFrancais
 
         private async Task InitialLoad()
         {
-            await QuizManager.LoadModules();
+            await QuizManager.LoadDictionary();
             this.PopulateModules();
 
             this.CurrentEntry = QuizManager.GetNextEntry()!;
@@ -109,28 +111,153 @@ namespace LaFrancais
 
         private void PopulateModules()
         {
-            QuizManager.ActiveModules = QuizManager.Modules!;
-            foreach (var module in QuizManager.Modules!)
+            QuizManager.ActiveModules = QuizManager.AllModules;
+            foreach (var chapter in QuizManager.Chapters!)
             {
-                var element = new StackLayout() 
+                var stackForChapter = new StackLayout 
                 {
                     Spacing = 5,
+                    Orientation = StackOrientation.Vertical
+                };
+                var stackForExpanderAndButton = new StackLayout
+                {
+                    Spacing = 15,
                     Orientation = StackOrientation.Horizontal
                 };
-                var label = new Label() { Text = module.Name, VerticalOptions = LayoutOptions.Center, FontSize = 16 };
-                var checkbox = new CheckBox() { IsChecked = true };
-                checkbox.CheckedChanged += Checkbox_CheckedChanged;
+                var selectChapterButton = new Button
+                {
+                    Padding = 0,
+                    FontFamily = "Segoe Fluent Icons",
+                    Text = "\uea98",
+                    MinimumWidthRequest = 29,
+                    MinimumHeightRequest = 29,
+                    HorizontalOptions = LayoutOptions.Center,
+                    VerticalOptions = LayoutOptions.Start,
+                    FontSize = 16,
+                    Margin = new Thickness(0, 4, 0, 0)
+                };
+                selectChapterButton.Clicked += SelectChapterButton_Clicked;
 
-                element.Add(checkbox);
-                element.Add(label);
+                var expander = new Expander 
+                {
+                    Header = new Label { Text = $" ⮝ {chapter.Name}", FontSize = 24 },
+                    Content = stackForChapter,
+                    IsExpanded = true
+                };
+                expander.ExpandedChanged += Expander_ExpandedChanged;
 
-                this.Modules_StackLayout.Add(element);
+                stackForExpanderAndButton.Add(selectChapterButton);
+                stackForExpanderAndButton.Add(expander);
+
+                foreach (var module in chapter.Modules) 
+                {
+                    var element = new StackLayout()
+                    {
+                        Spacing = 5,
+                        Orientation = StackOrientation.Horizontal
+                    };
+                    var label = new Label() { Text = module.Name, VerticalOptions = LayoutOptions.Center, FontSize = 16 };
+                    var checkbox = new CheckBox() { IsChecked = true };
+                    checkbox.CheckedChanged += Checkbox_CheckedChanged;
+
+                    element.Add(checkbox);
+                    element.Add(label);
+                    stackForChapter.Add(element);
+                }
+
+                this.Modules_StackLayout.Add(stackForExpanderAndButton);
             }
+        }
+
+        private Button[] GetChapterButtonList()
+        {
+            return this.Modules_StackLayout.Children
+                .Cast<StackLayout>()
+                .Select(s => s.Children[0] as Button)
+                .ToArray()!;
+        }
+
+        private int GetChapterIndexFromButton(Button button)
+        {
+            var buttonList = GetChapterButtonList();
+            var index = 0;
+            for (int i = 0; i < buttonList.Count(); ++i)
+            {
+                if ((buttonList!).ElementAt(i) == button)
+                {
+                    index = i;
+                    break;
+                }
+            }
+            return index;
+        }
+
+        private void SelectChapterButton_Clicked(object? sender, EventArgs e)
+        {
+            var realSender = (sender! as Button)!;
+            var index = GetChapterIndexFromButton(realSender);
+            GetExpanderByChapterIndex(index).IsExpanded = true;
+            var checxBoxes = GetModuleCheckBoxes(index);
+            if (checxBoxes.All(c => c.IsChecked))
+            {
+                foreach (var checkbox in checxBoxes)
+                {
+                    checkbox!.IsChecked = false;
+                }
+            }
+            else
+            {
+                foreach (var checkbox in checxBoxes)
+                {
+                    checkbox!.IsChecked = true;
+                }
+            }
+        }
+
+        private void Expander_ExpandedChanged(object? sender, CommunityToolkit.Maui.Core.ExpandedChangedEventArgs e)
+        {
+            var realSender = (sender! as Expander)!;
+            var chapter = (realSender.Header as Label)!.Text.Substring(3);
+            if (e.IsExpanded)
+            {
+                (realSender.Header as Label)!.Text = $" ⮝ {chapter}";
+            }
+            else
+            {
+                (realSender.Header as Label)!.Text = $" ⮟ {chapter}";
+            }
+        }
+
+        private CheckBox[] GetModuleCheckBoxes()
+        {
+            return this.Modules_StackLayout.Children
+                .Cast<StackLayout>()
+                .Select(s => s.Children[1] as Expander)
+                .Select(s => s.Content as StackLayout)
+                .SelectMany(s => s!.Children.Cast<StackLayout>())
+                .Select(s => s.Children[0] as CheckBox)
+                .ToArray()!;
+        }
+
+        private CheckBox[] GetModuleCheckBoxes(int chapterIndex)
+        {
+            return (GetExpanderByChapterIndex(chapterIndex).Content as StackLayout)!
+                .Children.Cast<StackLayout>()
+                .Select(s => s.Children[0] as CheckBox)
+                .ToArray()!;
+        }
+
+        private Expander GetExpanderByChapterIndex(int chapterIndex)
+        {
+            return this.Modules_StackLayout.Children
+                .Cast<StackLayout>()
+                .Select(s => s.Children[1] as Expander)
+                .ElementAt(chapterIndex)!;
         }
 
         private int GetModuleIndexFromCheckBoxSender(object sender)
         {
-            var checkboxList = this.Modules_StackLayout.Children.Cast<StackLayout>().Select(s => s.Children[0] as CheckBox);
+            var checkboxList = GetModuleCheckBoxes();
             var index = 0;
             for (int i = 0; i < checkboxList.Count(); ++i)
             {
@@ -149,11 +276,11 @@ namespace LaFrancais
 
             if (e.Value)
             {
-                QuizManager.ActiveModules = QuizManager.ActiveModules.Concat(new Module[] { QuizManager.Modules![index] }).ToArray();
+                QuizManager.ActiveModules = QuizManager.ActiveModules.Concat(new Module[] { QuizManager.AllModules[index] }).ToArray();
             }
             else
             {
-                QuizManager.ActiveModules = QuizManager.ActiveModules.Where(m => m != QuizManager.Modules![index]).ToArray();
+                QuizManager.ActiveModules = QuizManager.ActiveModules.Where(m => m != QuizManager.AllModules[index]).ToArray();
             }
             this.GoToNextQuestion();
         }
@@ -180,7 +307,7 @@ namespace LaFrancais
 
         private void SelectAll_Button_Clicked(object sender, EventArgs e)
         {
-            var checkboxList = this.Modules_StackLayout.Children.Cast<StackLayout>().Select(s => s.Children[0] as CheckBox);
+            var checkboxList = GetModuleCheckBoxes();
             if (checkboxList.All(c => c.IsChecked))
             {
                 foreach (var checkbox in checkboxList)
