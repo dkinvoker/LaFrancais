@@ -36,13 +36,9 @@
                         "ImageLink": "https://media.istockphoto.com/id/637743724/vector/dont-know-emoticon.jpg?s=612x612&w=0&k=20&c=bgCsI_wV-zRvFubr7SMeww-EMybuMzKwF1PvuYaKuvw="
                     },
                     {
-                        "Meaning": "Please",
+                        "Meaning": "Please (you)",
                         "FrancaisSpelling": "S'il te plaît",
                         "ImageLink": "https://previews.123rf.com/images/kazit/kazit1609/kazit160900011/63578850-emoticon-begging-for-forgiveness-sorry-emoticon-oh-please-emoticon-persuade-emoji-implore-emotion.jpg"
-                    },
-                    {
-                        "Meaning": "You're welcome",
-                        "FrancaisSpelling": "De rien"
                     },
                     {
                         "Meaning": "Good day",
@@ -57,23 +53,231 @@
                         "FrancaisSpelling": "Pardon"
                     },
                     {
+                        "Meaning": "Excuse me",
+                        "FrancaisSpelling": "Excusez-moi"
+                    },
+                    {
                         "Meaning": "Okay/All right",
                         "FrancaisSpelling": "D'accord"
                     }
                 ]
             },
             {
-                "Name": "1 - Welcome!",
+                "Name": "1 - Numbers",
                 "Entries": [
-
+                    {
+                        "Meaning": "Zero",
+                        "FrancaisSpelling": "Zéro"
+                    },
+                    {
+                        "Meaning": "One (he)",
+                        "FrancaisSpelling": "Un"
+                    },
+                    {
+                        "Meaning": "One (she)",
+                        "FrancaisSpelling": "Une"
+                    },
+                    {
+                        "Meaning": "Two",
+                        "FrancaisSpelling": "Deux"
+                    },
+                    {
+                        "Meaning": "Three",
+                        "FrancaisSpelling": "Trois"
+                    },
+                    {
+                        "Meaning": "Four",
+                        "FrancaisSpelling": "Quatre"
+                    },
+                    {
+                        "Meaning": "Five",
+                        "FrancaisSpelling": "Cinq"
+                    },
+                    {
+                        "Meaning": "Six",
+                        "FrancaisSpelling": "Six"
+                    },
+                    {
+                        "Meaning": "Seven",
+                        "FrancaisSpelling": "Sept"
+                    },
+                    {
+                        "Meaning": "Eight",
+                        "FrancaisSpelling": "Huit"
+                    },
+                    {
+                        "Meaning": "Nine",
+                        "FrancaisSpelling": "Neuf"
+                    },
+                    {
+                        "Meaning": "Ten",
+                        "FrancaisSpelling": "Dix"
+                    },
+                    {
+                        "Meaning": "Eleven",
+                        "FrancaisSpelling": "Onze"
+                    },
+                    {
+                        "Meaning": "Twelve",
+                        "FrancaisSpelling": "Douze"
+                    },
+                    {
+                        "Meaning": "Thirteen",
+                        "FrancaisSpelling": "Treize"
+                    },
+                    {
+                        "Meaning": "Fourteen",
+                        "FrancaisSpelling": "Quatorze"
+                    },
+                    {
+                        "Meaning": "Fifteen",
+                        "FrancaisSpelling": "Quinze"
+                    },
+                    {
+                        "Meaning": "Sixteen",
+                        "FrancaisSpelling": "Seize"
+                    },
+                    {
+                        "Meaning": "Seventeen",
+                        "FrancaisSpelling": "Dix-sept"
+                    },
+                    {
+                        "Meaning": "Eighteen",
+                        "FrancaisSpelling": "Dix-huit"
+                    },
+                    {
+                        "Meaning": "Nineteen",
+                        "FrancaisSpelling": "Dix-neuf"
+                    },
+                    {
+                        "Meaning": "Twenty",
+                        "FrancaisSpelling": "Vingt"
+                    },
+                    {
+                        "Meaning": "Twenty one",
+                        "FrancaisSpelling": "Vingt et un"
+                    },
+                    {
+                        "Meaning": "Twenty two",
+                        "FrancaisSpelling": "Vingt-deux"
+                    },
+                    {
+                        "Meaning": "Twenty three",
+                        "FrancaisSpelling": "Vingt-trois"
+                    },
+                    {
+                        "Meaning": "Twenty four",
+                        "FrancaisSpelling": "Vingt-quatre"
+                    },
+                    {
+                        "Meaning": "Twenty five",
+                        "FrancaisSpelling": "Vingt-cinq"
+                    },
+                    {
+                        "Meaning": "Twenty six",
+                        "FrancaisSpelling": "Vingt-six"
+                    },
+                    {
+                        "Meaning": "Twenty seven",
+                        "FrancaisSpelling": "Vingt-sept"
+                    },
+                    {
+                        "Meaning": "Twenty eight",
+                        "FrancaisSpelling": "Vingt-huit"
+                    },
+                    {
+                        "Meaning": "Twenty nine",
+                        "FrancaisSpelling": "Vingt-neuf"
+                    },
+                    {
+                        "Meaning": "Thirty",
+                        "FrancaisSpelling": "Trente"
+                    },
+                    {
+                        "Meaning": "Thirty one",
+                        "FrancaisSpelling": "Trente et un"
+                    }
                 ]
             },
             {
-                "Name": "2 - Numbers",
+                "Name": "2 - Dates",
                 "Entries": [
                     {
-                        "Meaning": "1",
-                        "FrancaisSpelling": "Un"
+                        "Meaning": "Monday",
+                        "FrancaisSpelling": "Lundi"
+                    },
+                    {
+                        "Meaning": "Tuesday",
+                        "FrancaisSpelling": "Mardi"
+                    },
+                    {
+                        "Meaning": "Wednesday",
+                        "FrancaisSpelling": "Mercredi"
+                    },
+                    {
+                        "Meaning": "Thursday",
+                        "FrancaisSpelling": "Jeudi"
+                    },
+                    {
+                        "Meaning": "Friday",
+                        "FrancaisSpelling": "Vendredi"
+                    },
+                    {
+                        "Meaning": "Saturday",
+                        "FrancaisSpelling": "Samedi"
+                    },
+                    {
+                        "Meaning": "Sunday",
+                        "FrancaisSpelling": "Dimanche"
+                    },
+
+                    {
+                        "Meaning": "January",
+                        "FrancaisSpelling": "Janvier"
+                    },
+                    {
+                        "Meaning": "February",
+                        "FrancaisSpelling": "Février"
+                    },
+                    {
+                        "Meaning": "March",
+                        "FrancaisSpelling": "Mars"
+                    },
+                    {
+                        "Meaning": "April",
+                        "FrancaisSpelling": "Avril"
+                    },
+                    {
+                        "Meaning": "May",
+                        "FrancaisSpelling": "Mai"
+                    },
+                    {
+                        "Meaning": "June",
+                        "FrancaisSpelling": "Juin"
+                    },
+                    {
+                        "Meaning": "July",
+                        "FrancaisSpelling": "Juillet"
+                    },
+                    {
+                        "Meaning": "August",
+                        "FrancaisSpelling": "Août"
+                    },
+                    {
+                        "Meaning": "September",
+                        "FrancaisSpelling": "Septembre"
+                    },
+                    {
+                        "Meaning": "October",
+                        "FrancaisSpelling": "Octobre"
+                    },
+                    {
+                        "Meaning": "November",
+                        "FrancaisSpelling": "Novembre"
+                    },
+                    {
+                        "Meaning": "December",
+                        "FrancaisSpelling": "Décembre"
                     }
                 ]
             }
