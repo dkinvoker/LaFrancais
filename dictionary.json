@@ -63,15 +63,18 @@
                 ]
             },
             {
-                "Name": "1 - Numbers",
+                "Name": "1 - Welcome!",
                 "Entries": [
 
                 ]
             },
             {
-                "Name": "2 - Animals",
+                "Name": "2 - Numbers",
                 "Entries": [
-                    
+                    {
+                        "Meaning": "1",
+                        "FrancaisSpelling": "Un"
+                    }
                 ]
             }
         ]
