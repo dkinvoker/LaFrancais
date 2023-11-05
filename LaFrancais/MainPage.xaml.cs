@@ -48,14 +48,14 @@ namespace LaFrancais
             if (this.Input_Editor.Text.Trim().ToLower() == this.CurrentEntry.FrancaisSpelling.Trim().ToLower())
             {
                 this.GoodAnswers++;
-                await DisplayAlert("Très bien!", $"'{this.CurrentEntry.FrancaisSpelling}' == '{this.CurrentEntry.Meaning}'", "Suivant →");
+                await DisplayAlert("Very good!", $"'{this.CurrentEntry.FrancaisSpelling}' == '{this.CurrentEntry.Meaning}'", "Next →");
 
                 this.GoToNextQuestion();
             }
             else
             {
                 this.BadAnswers++;
-                var next = !await DisplayAlert("Mal!", $"'{this.CurrentEntry.FrancaisSpelling}' == '{this.CurrentEntry.Meaning}'", "Répéter ⭯", "Suivant →");
+                var next = !await DisplayAlert("Bad!", $"'{this.CurrentEntry.FrancaisSpelling}' == '{this.CurrentEntry.Meaning}'", "Try again ⭯", "Next →");
                 if (next)
                 {
                     this.GoToNextQuestion();
