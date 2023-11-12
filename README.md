@@ -52,14 +52,19 @@ Let's look at app screen
 
 ![Cannot Install due to certification issues](.\Images\10.png)
 
-1. Word to type - It is a word the app selected for you to write.
-2. Francais letters table - can be used to input francais-specific letters.
-3. Module selection button - can be used to select which modules will be used to select phrases from.
+`1.` Word to type - It is a word the app selected for you to write.
+
+`2.` Francais letters table - can be used to input francais-specific letters.
+
+`3.` Module selection button - can be used to select which modules will be used to select phrases from.
 
 ![Module selection](.\Images\14.png)
 
-4. Info button.
-5. Narrator selection dropdown - can be used to change narrator voice.
-6. Textfield - you type here.
-7. Confirm button - Used to confirm your typing. If you click `Enter` while `6` is focused will confirm automatically.
+`4.` Info button.
+
+`5.` Narrator selection dropdown - can be used to change narrator voice.
+
+`6.` Textfield - you type here.
+
+`7.` Confirm button - Used to confirm your typing. If you click `Enter` while `6` is focused will confirm automatically.
 
