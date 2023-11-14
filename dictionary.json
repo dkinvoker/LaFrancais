@@ -280,6 +280,146 @@
                         "FrancaisSpelling": "Décembre"
                     }
                 ]
+            },
+            {
+                "Name": "3 - Countries and nationalities",
+                "Entries": [
+                    {
+                        "Meaning": "Algeria",
+                        "FrancaisSpelling": "L'Algérie",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/2560px-Flag_of_Algeria.svg.png"
+                    },
+                    {
+                        "Meaning": "Germany",
+                        "FrancaisSpelling": "L'Allemagne",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png"
+                    },
+                    {
+                        "Meaning": "Argentina",
+                        "FrancaisSpelling": "L'Argentine",
+                        "ImageLink": "https://cdn.britannica.com/69/5869-004-7D75CD05/Flag-Argentina.jpg"
+                    },
+                    {
+                        "Meaning": "Belgium",
+                        "FrancaisSpelling": "La Belgique",
+                        "ImageLink": "https://cdn.britannica.com/08/6408-004-405E272F/Flag-Belgium.jpg"
+                    },
+                    {
+                        "Meaning": "Brasil",
+                        "FrancaisSpelling": "Le Brésil",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png"
+                    },
+                    {
+                        "Meaning": "Cameroon",
+                        "FrancaisSpelling": "Le Cameroun",
+                        "ImageLink": "https://cdn.britannica.com/42/5042-004-7FF4ACCA/Flag-Cameroon.jpg"
+                    },
+                    {
+                        "Meaning": "Canada",
+                        "FrancaisSpelling": "Le Canada",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Flag_of_Canada_%281964%29.svg/1200px-Flag_of_Canada_%281964%29.svg.png"
+                    },
+                    {
+                        "Meaning": "China",
+                        "FrancaisSpelling": "La Chine",
+                        "ImageLink": "https://www.discoverwalks.com/blog/wp-content/uploads/2022/08/variant_flag_of_the_peoples_republic_of_china.jpg"
+                    },
+                    {
+                        "Meaning": "Colombia",
+                        "FrancaisSpelling": "La Colombie",
+                        "ImageLink": "https://cdn.britannica.com/68/7668-004-08492AB7/Flag-Colombia.jpg"
+                    },
+                    {
+                        "Meaning": "The Congo",
+                        "FrancaisSpelling": "Le Congo",
+                        "ImageLink": "https://cdn.britannica.com/94/7194-004-5FA84A72/Flag-Democratic-Republic-of-the-Congo.jpg"
+                    },
+                    {
+                        "Meaning": "Korea",
+                        "FrancaisSpelling": "La Corée",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_South_Korea.png/800px-Flag_of_South_Korea.png"
+                    },
+                    {
+                        "Meaning": "Spain",
+                        "FrancaisSpelling": "L'Espagne",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png"
+                    },
+                    {
+                        "Meaning": "USA",
+                        "FrancaisSpelling": "Les états-Unis",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/US_flag_49_stars.svg/2560px-US_flag_49_stars.svg.png"
+                    },
+                    {
+                        "Meaning": "France",
+                        "FrancaisSpelling": "La France",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/800px-Flag_of_France.svg.png"
+                    },
+                    {
+                        "Meaning": "India",
+                        "FrancaisSpelling": "L'Inde",
+                        "ImageLink": "https://m.media-amazon.com/images/I/31qo1O-qO7L._AC_UF1000,1000_QL80_.jpg"
+                    },
+                    {
+                        "Meaning": "Italy",
+                        "FrancaisSpelling": "L'Italie",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/220px-Flag_of_Italy.svg.png"
+                    },
+                    {
+                        "Meaning": "Japan",
+                        "FrancaisSpelling": "Le Japon",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Japan_%28bordered%29.svg/800px-Flag_of_Japan_%28bordered%29.svg.png"
+                    },
+                    {
+                        "Meaning": "The Morocco",
+                        "FrancaisSpelling": "Le Maroc",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/255px-Flag_of_Morocco.svg.png"
+                    },
+                    {
+                        "Meaning": "Mexico",
+                        "FrancaisSpelling": "Le Mexique",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Mexico.jpg/1024px-Flag_of_Mexico.jpg"
+                    },
+                    {
+                        "Meaning": "Poland",
+                        "FrancaisSpelling": "La Pologne",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/1200px-Flag_of_Poland.svg.png"
+                    },
+                    {
+                        "Meaning": "The Netherlands",
+                        "FrancaisSpelling": "Les Pays-Bas",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/255px-Flag_of_the_Netherlands.svg.png"
+                    },
+                    {
+                        "Meaning": "Russia",
+                        "FrancaisSpelling": "La Russie",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/640px-Flag_of_Russia.svg.png"
+                    },
+                    {
+                        "Meaning": "The Senegal",
+                        "FrancaisSpelling": "Le Sénégal",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/1280px-Flag_of_Senegal.svg.png"
+                    },
+                    {
+                        "Meaning": "Switzerland",
+                        "FrancaisSpelling": "La Suisse",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/512px-Flag_of_Switzerland.svg.png?20191016012602"
+                    },
+                    {
+                        "Meaning": "The Czech Republic",
+                        "FrancaisSpelling": "La République Tchèque",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/255px-Flag_of_the_Czech_Republic.svg.png"
+                    },
+                    {
+                        "Meaning": "Tunisia",
+                        "FrancaisSpelling": "La Tunisie",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/225px-Flag_of_Tunisia.svg.png"
+                    },
+                    {
+                        "Meaning": "Vietnam",
+                        "FrancaisSpelling": "Le Vietnam",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/1200px-Flag_of_Vietnam.svg.png"
+                    }
+                ]
             }
         ]
     },
