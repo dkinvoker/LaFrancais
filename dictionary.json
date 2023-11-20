@@ -420,6 +420,75 @@
                         "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/1200px-Flag_of_Vietnam.svg.png"
                     }
                 ]
+            },
+            {
+                "Name": "4 - Familly",
+                "Entries": [
+                    {
+                        "Meaning": "Mother",
+                        "FrancaisSpelling": "la Mère"
+                    },
+                    {
+                        "Meaning": "Parents",
+                        "FrancaisSpelling": "les parents"
+                    },
+                    {
+                        "Meaning": "Father",
+                        "FrancaisSpelling": "le père"
+                    },
+                    {
+                        "Meaning": "Grandparents",
+                        "FrancaisSpelling": "les grands-parents"
+                    },
+                    {
+                        "Meaning": "Grandfather",
+                        "FrancaisSpelling": "le grand-père"
+                    },
+                    {
+                        "Meaning": "grandmother",
+                        "FrancaisSpelling": "la grand-mère"
+                    },
+                    {
+                        "Meaning": "brother",
+                        "FrancaisSpelling": "le frère"
+                    },
+                    {
+                        "Meaning": "friends",
+                        "FrancaisSpelling": "les amis"
+                    },
+                    {
+                        "Meaning": "friends (Female only)",
+                        "FrancaisSpelling": "les amies"
+                    },
+                    {
+                        "Meaning": "uncle",
+                        "FrancaisSpelling": "le oncle"
+                    },
+                    {
+                        "Meaning": "aunt",
+                        "FrancaisSpelling": "la tante"
+                    },
+                    {
+                        "Meaning": "cousin (M)",
+                        "FrancaisSpelling": "le cousin"
+                    },
+                    {
+                        "Meaning": "cousin (F)",
+                        "FrancaisSpelling": "la cousine"
+                    },
+                    {
+                        "Meaning": "kids",
+                        "FrancaisSpelling": "les enfants"
+                    },
+                    {
+                        "Meaning": "Marriage",
+                        "FrancaisSpelling": "le Mariage"
+                    },
+                    {
+                        "Meaning": "Single",
+                        "FrancaisSpelling": "célibataire"
+                    }
+                ]
             }
         ]
     },
