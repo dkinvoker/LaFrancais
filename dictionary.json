@@ -489,6 +489,180 @@
                         "FrancaisSpelling": "célibataire"
                     }
                 ]
+            },
+            {
+                "Name": "5 - Food",
+                "Entries": [
+                    {
+                        "Meaning": "Fruits",
+                        "FrancaisSpelling": "Les fruits"
+                    },
+                    {
+                        "Meaning": "Vegetables",
+                        "FrancaisSpelling": "Les légumes"
+                    },
+                    {
+                        "Meaning": "Olive oil",
+                        "FrancaisSpelling": "L'huile d'olive",
+                        "ImageLink": "https://free-dom.fr/wp-content/uploads/2021/01/bienfaits-de-lhuile-dolive-768x512.jpg"
+                    },
+                    {
+                        "Meaning": "Rize",
+                        "FrancaisSpelling": "Le Riz",
+                        "ImageLink": "https://cdn.pratico-pratiques.com/app/uploads/sites/2/2020/03/16124840/comment-faire-cuire-le-riz.jpg"
+                    },
+                    {
+                        "Meaning": "Apple juice",
+                        "FrancaisSpelling": "Le Jus de pommes",
+                        "ImageLink": "https://www.jardindeshesperides.fr/wp-content/uploads/2021/02/Jus-Pomme.jpg"
+                    },
+                    {
+                        "Meaning": "Yogurt",
+                        "FrancaisSpelling": "Le yaourt",
+                        "ImageLink": "https://www.tompress.de/I-Grande-40682-yaourt-maison.net.jpg"
+                    },
+                    {
+                        "Meaning": "The butcher",
+                        "FrancaisSpelling": "La bouchère"
+                    },
+                    {
+                        "Meaning": "apricot",
+                        "FrancaisSpelling": "L'abricot",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Apricot_and_cross_section.jpg"
+                    },
+                    {
+                        "Meaning": "Cherry",
+                        "FrancaisSpelling": "La cerise",
+                        "ImageLink": "https://cdn-s-www.leprogres.fr/images/7A3E01B6-F689-4DCE-A173-A8A4EF72C832/NW_raw/photo-stock-adobe-com-1562264946.jpg"
+                    },
+                    {
+                        "Meaning": "The strawberry",
+                        "FrancaisSpelling": "La fraise",
+                        "ImageLink": "https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2011/07/thumb_720_450_fresh-red-strawberry_shutterstock_77084539.jpg"
+                    },
+                    {
+                        "Meaning": "Peach",
+                        "FrancaisSpelling": "La pêche",
+                        "ImageLink": "https://www.frutas-hortalizas.com/img/fruites_verdures/presentacio/25.jpg"
+                    },
+                    {
+                        "Meaning": "Apple",
+                        "FrancaisSpelling": "La pomme",
+                        "ImageLink": "https://static.manitobacooperator.ca/wp-content/uploads/2018/11/apple_GettyImages186843005_cmyk.jpg"
+                    },
+                    {
+                        "Meaning": "Tomato",
+                        "FrancaisSpelling": "La tomate",
+                        "ImageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj4rDngUShb-lYvzzoZUMY0Ms7PdVuDJkW6Z8hpybtoYk97FFuKwRjqR-Q7TEc_ZXZnHg&usqp=CAU"
+                    },
+                    {
+                        "Meaning": "Courgette",
+                        "FrancaisSpelling": "La courgette",
+                        "ImageLink": "https://www.ldoceonline.com/media/english/illustration/courgette.jpg?version=1.2.64"
+                    },
+                    {
+                        "Meaning": "Green beans",
+                        "FrancaisSpelling": "Les haricots verts",
+                        "ImageLink": "https://biotogo.tg/wp-content/uploads/2021/04/Bio-Togo-Haricot-vert.jpg"
+                    },
+                    {
+                        "Meaning": "Pepper",
+                        "FrancaisSpelling": "le poivron",
+                        "ImageLink": "https://assets.epicurious.com/photos/5baa601d7a685d1e72f1d0da/4:6/w_1600%2Cc_limit/shutterstock_754049899.jpg"
+                    },
+                    {
+                        "Meaning": "Potato",
+                        "FrancaisSpelling": "La pomme de terre",
+                        "ImageLink": "https://observatoire-des-aliments.fr/wp-content/uploads/2013/01/pomme-de-terre.jpg"
+                    },
+                    {
+                        "Meaning": "Salad",
+                        "FrancaisSpelling": "La salade",
+                        "ImageLink": "https://static.750g.com/images/622-auto/5b22ee47f22667ee6e1212399765780f/adobestock-53590332.jpeg"
+                    },
+                    {
+                        "Meaning": "Baguette",
+                        "FrancaisSpelling": "La baguette",
+                        "ImageLink": "https://cdn.perishablenews.com/2021/07/b-ba1.jpg"
+                    },
+                    {
+                        "Meaning": "Croissant",
+                        "FrancaisSpelling": "Le Croissant",
+                        "ImageLink": "https://www.delifrance.com/media/catalog/product/cache/a2b5c37732c9b5ce289563642b3b2aeb/1/9/19477_1.jpg"
+                    },
+                    {
+                        "Meaning": "Butter",
+                        "FrancaisSpelling": "Le beurre",
+                        "ImageLink": "https://www.lsa-conso.fr/mediatheque/1/2/6/000591621_896x598_c.jpg"
+                    },
+                    {
+                        "Meaning": "Cream",
+                        "FrancaisSpelling": "La crème",
+                        "ImageLink": "https://piatnica.com.pl/content/uploads/2020/11/Smietana_18_200_g-460x358.png"
+                    },
+                    {
+                        "Meaning": "Cheese",
+                        "FrancaisSpelling": "Le fomage",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/4/45/Cheese.jpg"
+                    },
+                    {
+                        "Meaning": "Flour",
+                        "FrancaisSpelling": "La farine",
+                        "ImageLink": "https://c8.alamy.com/compfr/hp6f57/la-farine-en-sac-avec-les-epis-de-ble-isole-sur-fond-blanc-sac-de-farine-complete-hp6f57.jpg"
+                    },
+                    {
+                        "Meaning": "Pasta",
+                        "FrancaisSpelling": "Les pâtes",
+                        "ImageLink": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/6F320FC7-CBD7-419D-B790-24DA25E975F9/Derivates/9774C36E-8478-4BE3-A8CD-FF02AC5B9BCB.jpg"
+                    },
+                    {
+                        "Meaning": "Egg",
+                        "FrancaisSpelling": "L'œuf",
+                        "ImageLink": "https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Instagram_egg.jpg/220px-Instagram_egg.jpg"
+                    },
+                    {
+                        "Meaning": "Fish",
+                        "FrancaisSpelling": "Le poisson",
+                        "ImageLink": "https://www.tastingtable.com/img/gallery/x-different-ways-to-cook-fish/intro-1643135113.jpg"
+                    },
+                    {
+                        "Meaning": "Chicken",
+                        "FrancaisSpelling": "Le poulet",
+                        "ImageLink": "https://www.thepauperedchef.com/photos/images/2010/02/chicken-oyster-1.jpg"
+                    },
+                    {
+                        "Meaning": "Meat",
+                        "FrancaisSpelling": "La viande"
+                    },
+                    {
+                        "Meaning": "A box of",
+                        "FrancaisSpelling": "Une boite de"
+                    },
+                    {
+                        "Meaning": "A bottle of",
+                        "FrancaisSpelling": "Une bouteille de",
+                        "ImageLink": "https://www.boboco.fr/1704-large_default/bouteille-cidre-75cl.jpg"
+                    },
+                    {
+                        "Meaning": "A kilo of",
+                        "FrancaisSpelling": "Un kilo de"
+                    },
+                    {
+                        "Meaning": "A basket of",
+                        "FrancaisSpelling": "Un panier de",
+                        "ImageLink": "https://previews.123rf.com/images/tkphotography/tkphotography1301/tkphotography130100166/17625881-un-panier-en-osier-rempli-de-beaucoup-de-diff%C3%A9rents-fruits-frais-isol%C3%A9-devant-un-fond-blanc.jpg"
+                    },
+                    {
+                        "Meaning": "A packet of",
+                        "FrancaisSpelling": "Un paquet de",
+                        "ImageLink": "https://img-3.journaldesfemmes.fr/TwcoeEB5EszPo3LXJ6lt9WUn22U=/1500x/smart/4c544326752a4a4cbca933492fe0589d/ccmcms-jdf/24361131.jpg"
+                    },
+                    {
+                        "Meaning": "A pot of",
+                        "FrancaisSpelling": "Un pot de",
+                        "ImageLink": "https://www.boboco.fr/1670-pdt_540/pot-de-yaourt-14cl.jpg"
+                    }
+                ]
             }
         ]
     },
