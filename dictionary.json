@@ -663,6 +663,184 @@
                         "ImageLink": "https://www.boboco.fr/1670-pdt_540/pot-de-yaourt-14cl.jpg"
                     }
                 ]
+            },
+            {
+                "Name": "6 - Daily Life",
+                "Entries": [
+                    {
+                        "Meaning": "Morning",
+                        "FrancaisSpelling": "Matin"
+                    },
+                    {
+                        "Meaning": "Midday/noon",
+                        "FrancaisSpelling": "Midi"
+                    },
+                    {
+                        "Meaning": "Afternoon",
+                        "FrancaisSpelling": "L'après-midi"
+                    },
+                    {
+                        "Meaning": "Evening",
+                        "FrancaisSpelling": "Le soir"
+                    },
+                    {
+                        "Meaning": "To brush your teeth",
+                        "FrancaisSpelling": "Se brosser les dents"
+                    },
+                    {
+                        "Meaning": "To Do your hair",
+                        "FrancaisSpelling": "Se coiffer"
+                    },
+                    {
+                        "Meaning": "To take a shower",
+                        "FrancaisSpelling": "Se doucher"
+                    },
+                    {
+                        "Meaning": "To get dressed",
+                        "FrancaisSpelling": "S'habiller"
+                    },
+                    {
+                        "Meaning": "To get up",
+                        "FrancaisSpelling": "Se lever"
+                    },
+                    {
+                        "Meaning": "To do a make-up",
+                        "FrancaisSpelling": "Se maquiller"
+                    },
+                    {
+                        "Meaning": "To take care of kids",
+                        "FrancaisSpelling": "s'occuper des enfants"
+                    },
+                    {
+                        "Meaning": "To have a breakfest",
+                        "FrancaisSpelling": "Prendre son petit déjeuner"
+                    },
+                    {
+                        "Meaning": "To prepare",
+                        "FrancaisSpelling": "Se préparer"
+                    },
+                    {
+                        "Meaning": "To shave",
+                        "FrancaisSpelling": "Se raser"
+                    },
+                    {
+                        "Meaning": "To wake up",
+                        "FrancaisSpelling": "Se réveiller"
+                    },
+                    {
+                        "Meaning": "Laundry",
+                        "FrancaisSpelling": "La Lessive"
+                    },
+                    {
+                        "Meaning": "To cook",
+                        "FrancaisSpelling" : "Faire à manger"
+                    },
+                    {
+                        "Meaning": "Dishes",
+                        "FrancaisSpelling": "La vaisselle"
+                    },
+                    {
+                        "Meaning": "Kitchen",
+                        "FrancaisSpelling": "La cuisine"
+                    },
+                    {
+                        "Meaning": "To can",
+                        "FrancaisSpelling": "Pouvoir"
+                    },
+                    {
+                        "Meaning": "To want",
+                        "FrancaisSpelling": "Vouloir"
+                    }
+                ]
+            },
+            {
+                "Name": "7 - Technology",
+                "Entries": [
+                    {
+                        "Meaning": "Battery",
+                        "FrancaisSpelling": "La batterie"
+                    },
+                    {
+                        "Meaning": "Headphones",
+                        "FrancaisSpelling": "Les écouteurs"
+                    },
+                    {
+                        "Meaning": "Smartwatch",
+                        "FrancaisSpelling": "la montre connectée"
+                    },
+                    {
+                        "Meaning": "Computer",
+                        "FrancaisSpelling": "L'ordinateur"
+                    }
+                ]
+            },
+            {
+                "Name":"8 - Trinkets",
+                "Entries": [
+                    {
+                        "Meaning": "Wallet",
+                        "FrancaisSpelling": "Le portefeuille"
+                    },
+                    {
+                        "Meaning": "the key ring",
+                        "FrancaisSpelling": "le porte-clés"
+                    },
+                    {
+                        "Meaning": "Sports bag",
+                        "FrancaisSpelling": "le sac de sport"
+                    },
+                    {
+                        "Meaning": "Suitcase",
+                        "FrancaisSpelling": "La valise"
+                    },
+                    {
+                        "Meaning": "Backpack",
+                        "FrancaisSpelling": "Le sac à dos"
+                    },
+                    {
+                        "Meaning": "Photo frame",
+                        "FrancaisSpelling": "Le cadre photo"
+                    },
+                    {
+                        "Meaning": "Weight",
+                        "FrancaisSpelling": "Le poids"
+                    },
+                    {
+                        "Meaning": "Size",
+                        "FrancaisSpelling": "La taille"
+                    },
+                    {
+                        "Meaning": "Light (weight)",
+                        "FrancaisSpelling": "léger"
+                    },
+                    {
+                        "Meaning": "heavy (weight)",
+                        "FrancaisSpelling": "lourd"
+                    },
+                    {
+                        "Meaning": "small",
+                        "FrancaisSpelling": "patit"
+                    }, 
+                    {
+                        "Meaning": "Big",
+                        "FrancaisSpelling": "grand"
+                    }
+                ]
+            },
+            {
+                "Name":"10 - Clothes",
+                "Entries": [
+
+                ]
+            },
+            {
+                "Name": "11 - Person description",
+                "Entries": [
+                    {
+                        "Meaning": "Main character",
+                        "FrancaisSpelling": "Le personnage principal"
+                    }
+                ]
             }
         ]
     },
