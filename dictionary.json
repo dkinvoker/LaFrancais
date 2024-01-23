@@ -841,6 +841,47 @@
                         "FrancaisSpelling": "Le personnage principal"
                     }
                 ]
+            },
+            {
+                "Name": "12 - Object placement",
+                "Entries": [
+                    {
+                        "Meaning": "Left to",
+                        "FrancaisSpelling": "à gauche de"
+                    },
+                    {
+                        "Meaning": "Right to",
+                        "FrancaisSpelling": "à droit de"
+                    },
+                    {
+                        "Meaning": "On",
+                        "FrancaisSpelling": "Sur"
+                    },
+                    {
+                        "Meaning": "Under",
+                        "FrancaisSpelling": "Sous"
+                    },
+                    {
+                        "Meaning": "In front",
+                        "FrancaisSpelling": "devant"
+                    },
+                    {
+                        "Meaning": "Behind",
+                        "FrancaisSpelling": "derrière"
+                    },
+                    {
+                        "Meaning": "Next to",
+                        "FrancaisSpelling": "à côté de"
+                    },
+                    {
+                        "Meaning": "In front of",
+                        "FrancaisSpelling": "en face de"
+                    },
+                    {
+                        "Meaning": "between",
+                        "FrancaisSpelling": "entre"
+                    }
+                ]
             }
         ]
     },
