@@ -830,7 +830,18 @@
             {
                 "Name":"10 - Clothes",
                 "Entries": [
-
+                    {
+                        "Meaning": "Shirt",
+                        "FrancaisSpelling": "La chemise"
+                    },
+                    {
+                        "Meaning": "Suit",
+                        "FrancaisSpelling": "Le costume"
+                    },
+                    {
+                        "Meaning": "Vest",
+                        "FrancaisSpelling": "Le gilet"
+                    }
                 ]
             },
             {
